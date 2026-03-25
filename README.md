@@ -115,3 +115,23 @@ tween(loadFrame,0.8,{BackgroundTransparency = 1})
 
 task.wait(1)
 screenGui:Destroy()
+
+----------------------------------------------------------------------------------------------------------------
+-----------------------------------------Aba Nome de entrada-----------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
+
+local RE = ReplicatedStorage:WaitForChild("RE")
+local NameEvent = RE:WaitForChild("1RPNam1eTex1t")
+local ColorEvent = RE:WaitForChild("1RPNam1eColo1r")
+
+-- Nome RP
+NameEvent:FireServer("RolePlayName","SAGAZx HUB")
+
+-- Cor nome
+ColorEvent:FireServer("PickingRPNameColor",Color3.fromRGB(128,86,255))
+
+-- Bio
+NameEvent:FireServer("RolePlayBio","BEM-VINDO "..Player.DisplayName)
+
+-- Cor Bio
+ColorEvent:FireServer("PickingRPBioColor",Color3.fromRGB(87,191,255))
